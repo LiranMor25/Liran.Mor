@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+<body>
+<h1 style = "color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 75px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; ">Liran's Form Page</h1>
+<h2 style = "color: #7c795d; font-family: 'Helvetica Neue', sans-serif; font-size: 35px; font-weight: normal; line-height: 48px; margin: 0; text-align: center;  ">Please Enter The Following Details:</h2>
+<form  id="Submit" method="get" onsubmit="return ValidateForm(this);" style = " background-color: #7c795d; color: white; font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 24px; margin: 0 0 24px;  text-justify: inter-word;text-align: center; ">
+<script type="text/javascript">
+function ValidateForm(frm1) {
+if (frm1.fname.value == "") { alert('First Name is required.'); frm1.fname.focus(); return false; }
+if (frm1.lname.value == "") { alert('Last Name is required.'); frm1.lname.focus(); return false; }
+if (frm1.pass.value == "") { alert('Password is required.'); frm1.pass.focus(); return false; }
+if (frm1.Pnumber.value == "") { alert('Phone Number is required.'); frm1.Pnumber.focus(); return false; }
+if (frm1.email.value == "") { alert('Email address is required.'); frm1.email.focus(); return false; }
+if (frm1.email.value.indexOf("@") < 1 || frm1.email.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm1.email.focus(); return false; }
+return true; }
+</script>
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname"><br>
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname"><br>
+<label for="Pnumber">Phone Number:</label><br>
+<input type="number" id="Pnumber" name="Pnumber"><br>
+<label>Gender:</label><br>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="other">
+<label for="other">Other</label><br>
+<label>Enter your email:</label><br>
+<input type="email" id="email" name="email"><br>
+<label>Enter your password:</label><br>
+<input type="password" id="password" name="pass"><br>
+<label>confirm your password</label><br>
+<input type="password" name="pass"><br>
+<label>Choose your country</label><br>
+<select name="country" id="register_country" style="width:160px">
+    <option value="israel">israel</option>
+    <option value="usa">usa</option>
+    <option value="russia">russia</option>
+    <option value="china">china</option>
+    <option value="other">other</option>
+</select>
+<br><label>Enter your Address:</label><br>
+<textarea></textarea><br>
+
+<input name="submit" type="submit" value="Submit">
+</form>
+<h2 style = "color: #7c795d; font-family: 'Helvetica Neue', sans-serif; font-size: 35px; font-weight: normal; line-height: 48px; margin: 0; text-align: center;  ">Contact Us : </h2>
+
+<form style="color: #7c795d; font-family: 'Helvetica Neue', sans-serif;text-align: center;text-justify: inter-word;" action="//submit.form" id="ContactUs" method="post" onsubmit="return ValidateForm(this);">
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+return true; }
+</script>
+<br>
+<label for="fname">Name*:</label>
+<br>
+<input name="Name" type="text" maxlength="60" />
+<Br>
+<label for="Pnumber">Phone number:</label>
+<Br><input name="Pnumber" type="text" maxlength="43" style="width:100%;max-width:250px;" />
+<Br>
+<label for="email">Email address*:</label>
+<Br>
+<input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;max-width:250px;" />
+<Br>
+<label>Enter your Address:</label>
+<Br>
+<textarea></textarea>
+<Br>
+<label for="Comments">Comments*:</label>
+<Br>
+<textarea id="Comments" name="Comments" rows="7" cols="40" style="width:100%;max-width:350px;"></textarea>
+<Br>
+* - required fields
+<Br>
+<input name="Submit1" type="submit" value="Submit" />
+<Br>
+</form>
+</body>
+</html>
