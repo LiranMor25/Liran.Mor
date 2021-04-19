@@ -1,0 +1,91 @@
+    html{
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+    body{
+  margin: 40px;
+}
+
+    .wrap{
+	display: grid;
+	grid-template-areas:
+    "pic brief brief brief"
+    "Contact Contact Contact Contact"
+    "EXP EXP STR STR"
+    "EXP EXP TECH TECH"
+    "vExp vExp LAN-INT LAN-INT";
+	grid-template-rows: 22.5% 10% 22.5% 22.5% 22.5%;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-gap: 4px;
+    height: 800px;
+}
+
+    .box{
+  background-color: #4472C4;
+  color: #fff;
+  border:0.1vw solid black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+    .pic{
+    grid-area: pic;
+}
+
+    .brief{
+    grid-area: brief;
+}
+
+    .Contact{
+    grid-area: Contact;
+}
+
+    .EXP{
+    grid-area: EXP;
+}
+
+    .vExp{
+    grid-area: vExp;
+}
+
+    .STR{
+    grid-area: STR;
+}
+
+    .TECH{
+    grid-area: TECH;
+}
+    .LAN-INT{
+    grid-area: LAN-INT;
+}
+
+@media (max-width: 768px) {
+    .wrap{
+	grid-template-areas:
+    "pic pic"
+    "brief brief brief brief"
+    "Contact Contact Contact Contact"
+    "EXP EXP EXP EXP"
+    "STR STR STR STR"
+    "TECH TECH TECH TECH"
+    "vExp vExp vExp vExp"
+    "LAN-INT LAN-INT LAN-INT LAN-INT";
+    }
+}
+
+    @keyframes hoverMe {
+    0% {background-color: black;}
+    100% {background-color: yellow;}
+    0% {text-align: left;}
+    100% {text-align: center;}
+}
+
+    .wrap:hover {
+    animation-name: hoverMe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
