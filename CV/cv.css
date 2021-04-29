@@ -1,91 +1,354 @@
-    html{
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-    body{
-  margin: 40px;
+body {
+    background: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    overflow-x: hidden;
+    margin: 0px;
 }
 
-    .wrap{
-	display: grid;
-	grid-template-areas:
-    "pic brief brief brief"
-    "Contact Contact Contact Contact"
-    "EXP EXP STR STR"
-    "EXP EXP TECH TECH"
-    "vExp vExp LAN-INT LAN-INT";
-	grid-template-rows: 22.5% 10% 22.5% 22.5% 22.5%;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-gap: 4px;
-    height: 800px;
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
-    .box{
-  background-color: #4472C4;
-  color: #fff;
-  border:0.1vw solid black;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+.wrap {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+    "Brief-thumb Brief-thumb Brief-thumb Brief-img"
+    "about-img containerAbout containerAbout containerAbout"
+    "containerEXP containerEXP containerEXP experience-img"
+    "containerEDU containerEDU containerContact containerContact"
+    "containerFooter containerFooter containerFooter containerFooter";
 }
 
-    .pic{
-    grid-area: pic;
+/*---------------------------------------
+    Typorgraphy              
+-----------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-style: normal;
+    font-weight: 300;
 }
 
-    .brief{
-    grid-area: brief;
+h1, h2, h3 {
+    font-weight: 300;
 }
 
-    .Contact{
-    grid-area: Contact;
+h1 {
+    font-size: 42px;
+    padding-bottom: 14px;
+    margin-bottom: 0px;
 }
 
-    .EXP{
-    grid-area: EXP;
+h2 {
+    font-size: 42px;
+    line-height: 52px;
+    margin-top: 0px;
 }
 
-    .vExp{
-    grid-area: vExp;
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    padding-bottom: 6px;
 }
 
-    .STR{
-    grid-area: STR;
+h4 {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 6px;
 }
 
-    .TECH{
-    grid-area: TECH;
-}
-    .LAN-INT{
-    grid-area: LAN-INT;
+h5 {
+    color: #666666;
 }
 
-@media (max-width: 768px) {
-    .wrap{
-	grid-template-areas:
-    "pic pic"
-    "brief brief brief brief"
-    "Contact Contact Contact Contact"
-    "EXP EXP EXP EXP"
-    "STR STR STR STR"
-    "TECH TECH TECH TECH"
-    "vExp vExp vExp vExp"
-    "LAN-INT LAN-INT LAN-INT LAN-INT";
-    }
+strong {
+    color: #232B2B;
+    font-weight: normal;
 }
 
-    @keyframes hoverMe {
-    0% {background-color: black;}
-    100% {background-color: yellow;}
-    0% {text-align: left;}
-    100% {text-align: center;}
+p {
+    color: #888;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.2px;
 }
 
-    .wrap:hover {
-    animation-name: hoverMe;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+
+.containerEDU,
+.containerEXP {
+    background: #E9724C;
+}
+
+.containerAbout {
+    background: #E3AE57;
+}
+
+
+.color-white {
+    color: #ffffff;
+}
+
+.color-yellow {
+    color: #E3AE57;
+}
+
+.bg-yellow {
+    background: #E3AE57;
+}
+
+.bg-white {
+    background: #ffffff;
+}
+
+.bg-dark {
+    background: #161616;
+}
+
+
+/*---------------------------------------
+    General               
+-----------------------------------------*/
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #E3AE57;
+    text-decoration: none !important;
+}
+
+a:hover, a:active, a:focus {
+    color: #E3AE57;
+    outline: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*---------------------------------------
+    Brief section              
+-----------------------------------------*/
+.Brief-img {
+    grid-area: Brief-img;
+    background: url('profilePicture.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 400px;
+}
+
+.Brief-thumb {
+    grid-area: Brief-thumb;
+    background: #fff;
+    /* light blue color: #c3eafd; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+/*---------------------------------------
+   About section              
+-----------------------------------------*/
+.about-img {
+    grid-area: about-img;
+    background: url('skills.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 400px;
+}
+
+.containerAbout {
+    grid-area: containerAbout;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 50px;
+}
+
+.containerAbout .progress {
+    background: #ffffff;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 2px;
+}
+
+.containerAbout .progress-bar-primary {
+    background: #232B2B;
+}
+
+.containerAbout strong,
+.containerAbout span {
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+
+/*---------------------------------------
+    Experience section              
+-----------------------------------------*/
+.experience-img {
+    grid-area: experience-img;
+    background: url('gestionar-tu-cv.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 400px;
+}
+
+.containerEXP {
+    grid-area: containerEXP;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 50px;
+}
+
+.containerEXP .media-heading {
+    margin-bottom: 0px;
+}
+
+.containerEXP .media .fa {
+    font-size: 42px;
+    margin-right: 14px;
+}
+
+.containerEXP small {
+    color: #633;
+    font-weight: bold;
+}
+
+/*---------------------------------------
+    Education section              
+-----------------------------------------*/
+
+.containerEDU {
+    grid-area: containerEDU;
+    background: #E3AE57;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 50px;
+}
+
+
+.containerEDU .media-heading {
+    margin-bottom: 0px;
+}
+
+.containerEDU .media .fa {
+    font-size: 42px;
+    margin-right: 14px;
+}
+
+.containerEDU small {
+    color: #886D1E;
+    font-weight: bold;
+}
+
+
+/*---------------------------------------
+    Contact section              
+-----------------------------------------*/
+
+.contact-form {
+    grid-area: containerContact;
+    background: #E3AE57;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 50px;
+}
+
+
+.contact-form .contact-info {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+.contact-form input[type="submit"]:hover {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.contact-form {
+    padding-right: 10px;
+}
+
+
+/*---------------------------------------
+   Footer section              
+-----------------------------------------*/
+
+footer {
+    grid-area: containerFooter;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 50px;
+    background: lightslategray;
+}
+
+
+/*---------------------------------------
+   Social icon             
+-----------------------------------------*/
+
+.social-icon {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.social-icon li {
+    display: inline-block;
+    list-style: none;
+}
+
+.social-icon li a {
+    border: 2px solid transparent;
+    color: #999;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    margin: 22px 4px 10px 4px;
+}
+
+.social-icon li a:hover {
+    background: #E3AE57;
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: scale(1.1);
 }

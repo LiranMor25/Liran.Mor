@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90caf49e-dcd4-4fc9-a55e-4ee0316db8fc" name="Default Changelist" comment=" git commit -m &quot;forms page&quot;&#10; git push">
-      <change afterPath="$PROJECT_DIR$/CV/cv.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CV/cv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CV/SKILLS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CV/formCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CV/gestionar-tu-cv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CV/skecth-cv.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV/CV SKETCH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV/RYMEDICAL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV/cv.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV/cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/CV/cv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV/socialSymbols.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +23,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,7 +57,12 @@
       <workItem from="1615715482104" duration="3236000" />
       <workItem from="1616159279905" duration="5114000" />
       <workItem from="1618411988091" duration="2790000" />
-      <workItem from="1618850234896" duration="7104000" />
+      <workItem from="1618850234896" duration="7681000" />
+      <workItem from="1619367279782" duration="6000000" />
+      <workItem from="1619414300531" duration="116000" />
+      <workItem from="1619451465437" duration="2215000" />
+      <workItem from="1619501960767" duration="48000" />
+      <workItem from="1619693403150" duration="18254000" />
     </task>
     <task id="LOCAL-00001" summary=" git commit -m &quot;forms page&quot;&#10; git push">
       <created>1616164163629</created>
