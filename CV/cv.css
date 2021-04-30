@@ -21,6 +21,18 @@ html, body {
     "containerEXP containerEXP containerEXP experience-img"
     "containerEDU containerEDU containerContact containerContact"
     "containerFooter containerFooter containerFooter containerFooter";
+    text-align: center;
+}
+
+@keyframes hoverMe {
+    100% {
+        background-color: #c3eafd;
+    }
+}
+
+.Brief-thumb:hover {
+    animation-name: hoverMe;
+    animation-duration: 8s;
 }
 
 /*---------------------------------------
