@@ -12,7 +12,7 @@ function createUserList(users){
     console.log(users);
     const cMain = document.querySelector("main");
     for(let user of users){
-       const section= document.createElement('section') ;
+       const section= document.addcreateElement('section') ;
        section.innerHTML = `
            <img src ="${user.avatar}" alt="Pofile Picture"/>
            <div>

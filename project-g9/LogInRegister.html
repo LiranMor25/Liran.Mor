@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Log In Register</title>
+    <link rel="stylesheet" href="LogInRegister.css">
+
+</head>
+<!--header-->
+<header class="main-header" role="header">
+    <a href=Main.html class="logo"></a>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+        <ul class="main-menu">
+            <li><a href=Main.html>Home</a></li>
+            <li><a href=Main.html>About Us</a></li>
+            <li><a href=Main.html>Services</a></li>
+            <!-- <li><a href="#section5">Video</a></li> -->
+            <li><a href=Main.html>Contact</a></li>
+            <li><a href=LogInRegister.html class="external">Sign In</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action=Main.html>
+            <h1>Create Account</h1>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name"/>
+            <input type="email" placeholder="Email"/>
+            <input type="password" placeholder="Password"/>
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form action=Main.html>
+            <h1>Sign in</h1>
+            <br>
+            <span>or use your account</span>
+            <br>
+            <br>
+            <input type="email" placeholder="Email"/>
+            <input type="password" placeholder="Password"/>
+            <br>
+            <button>Sign In</button>
+
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="LogInRegister.js"></script>
+
+</html>

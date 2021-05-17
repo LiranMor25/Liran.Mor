@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Main.css">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Omer's BarberShop</title>
+</head>
+<body style="margin-bottom: -20px">
+
+<!--header-->
+<header class="main-header" role="header">
+
+    <a href="#" class="logo"></a>
+
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+        <ul class="main-menu">
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About Us</a></li>
+            <li><a href="#section4">Appointments</a></li>
+            <!-- <li><a href="#section5">Video</a></li> -->
+            <li><a href="#footer">Contact</a></li>
+            <li><a href=LogInRegister.html class="external">Sign In</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--first area-->
+<section class="section main-banner" id="section1" data-section="section1" style="margin: 0">
+    <img class="imgfirst" src="first%20image.jpg"></img>
+    <div class="img-overlay">
+        <div class="caption">
+            <h1>Welcome To Omer's <br>Barbershop</h1>
+            <div class="main-button">
+                <a href="#section2"> About us </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--second area-->
+<section class="section carrousel" id="section3" style="margin: 0">
+    <div style="text-align: center;">
+        <br>
+        <img id="image" src="Capture3.jpeg" style="width:800px">
+
+        <script>
+
+            var imageSources = ["Capture1.jpeg", "Capture2.jpeg", "Capture3.jpeg"]
+
+            var index = 0;
+            setInterval(function () {
+                if (index === imageSources.length) {
+                    index = 0;
+                }
+                document.getElementById("image").src = imageSources[index];
+                index++;
+            }, 4000);
+
+
+        </script>
+    </div>
+</section>
+
+<!--third area-->
+<section class="section aboutus" id="section2" style="margin: 0">
+    <div class="left-content">
+        <div class="row">
+            <div class="column">
+                <h4>Omer Dahan <em>Barber Expert</em></h4>
+                <p>Hello Guys<br><br>
+                My name is Omer, im 27 years old<br><br>
+                I started by cutting my friends hair before they went to the army,
+                two years later they didnt agree anyone else to cut their hair<br><br>
+                the rest is history<br><br>
+                Im inviting you to have a first free haircut, on the house<br><br>
+                but be carful, you will get addicted!</p>
+                <div class="main-button"><a href="#footer">Contact Me</a></div>
+            </div>
+            <div class="column">
+                <div class="aboutImg"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appoitment Section -->
+
+<section id="section4" class="Make-an-appointment" style="text-align: center">
+    <div class="appointment-overlay">
+        <h1>Hey, make an appointment..</h1>
+        <p>Fill in the next fields </p>
+
+        <form action="" id="Contact" method="post" onsubmit="return ValidateForm(this)"
+              style="font-family: 'Montserrat', sans-serif">
+            <div class="row" style="text-align: center">
+                <div class="column">
+                    <label for="Name">Name*:</label>
+                    <br>
+                    <input id="Name" name="Name" type="text" maxlength="60"/>
+                    <Br>
+                    <label for="Pnumber">Phone number:</label>
+                    <Br><input id="Pnumber" name="Pnumber" type="text" maxlength="43"
+                               style="width:100%;max-width:250px;"/>
+                    <Br>
+                    <label for="email">Email address*:</label>
+                    <Br>
+                    <input id="email" name="FromEmailAddress" type="text" maxlength="90"
+                           style="width:100%;max-width:250px;"/>
+                    <Br>
+                </div>
+                <div class="column">
+                    <label for="cutDate">Hair Cut Date:*</label>
+                    <input type="date" id="cutDate" name="cutDate">
+                    <Br><Br><Br>
+                    * - required fields
+                    <Br><Br><Br>
+                    <button class="submitbut" type="submit" id="fcf-button" name="submit">Send</button>
+                    <Br>
+                </div>
+                <div class="column">
+                    <label>Enter The Type Of The Service:*</label>
+                    <Br>
+                    <input type="text"></input>
+                    <Br>
+                    <label for="Comments">Comments:</label>
+                    <Br>
+                    <input id="Comments" name="Comments" rows="7" cols="40" type="text"
+                              style="width:100%;max-width:350px;"></input>
+                    <Br>
+                </div>
+
+            </div>
+            <br><br>
+        </form>
+    </div>
+</section>
+
+
+<!--footer-->
+<section class="footer" id="footer">
+    <div class="logonoBg"></div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.7971704931574!2d34.80069108566807!3d31.25403778145852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15026642e7f470bf%3A0xa7a9cde1b8466afd!2z157XkteT15zXmSDXkNeR15nXodeo15XXqCDXqNeS16ggNTU!5e0!3m2!1siw!2sil!4v1620552638184!5m2!1siw!2sil"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="TextFooter" style="padding-left: 50px">
+        <h4>Omer Dahan's BarberShop</h4>
+        <h4>Man Only</h4>
+        <h5>55 Rager Street</h5>
+        <h5>Beer Sheva</h5>
+        <a href=tel:+97205678945><h5>Tel: +97205678945</h5></a>
+    </div>
+
+</section>
+</body>
+</html>
