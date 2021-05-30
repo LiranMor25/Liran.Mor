@@ -17,6 +17,7 @@ html, body {
     display: grid;
     grid-template-areas:
     "Brief-thumb Brief-thumb Brief-thumb Brief-img"
+    "containerLog containerLog containerSea containerSea"
     "about-img containerAbout containerAbout containerAbout"
     "containerEXP containerEXP containerEXP experience-img"
     "containerEDU containerEDU containerContact containerContact"
@@ -365,4 +366,18 @@ footer {
     border-color: #ffffff;
     color: #ffffff;
     transform: scale(1.1);
+}
+
+/*---------------------------------------
+   Assignment section
+-----------------------------------------*/
+
+.containerLog {
+    grid-area: containerLog;
+    background: lightslategray;
+}
+
+.containerSea {
+    grid-area: containerSea;
+    background: lightslategray;
 }
