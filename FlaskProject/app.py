@@ -1,8 +1,11 @@
 from flask import Flask, url_for, redirect
-from flask import render_template, request, session
+from flask import render_template, request, session, blueprints
 
 app = Flask(__name__)
 app.secret_key = '123'
+
+from pages.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
 
 
 @app.route('/', methods=['GET', 'POST', 'DELETE', 'PUT'])
@@ -49,6 +52,11 @@ def hello_assignment9():
         session['username'] = username
 
     return render_template('assignment9.html', request_method=request.method, username=username)
+
+
+@app.route('/assignment10', methods=['GET', 'POST', 'DELETE', 'PUT'])
+def hello_assignment10():
+    return render_template('assignment10.html')
 
 
 @app.route('/log_out')

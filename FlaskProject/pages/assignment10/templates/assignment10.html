@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 10</title>
+</head>
+<body style="text-align: center">
+
+<h1>Assignment 10</h1>
+    <div>
+        <h2>List Of All Users:</h2>
+        <ul>
+            {% if users %}
+                {% for user in users %}
+                    <li>
+                         <h3>{{ user.FirstName }}, {{ user.LastName }}, {{ user.UserEmail }}</h3>
+                        <img src="{{ user.avatar }}" alt="Profile Picture"/>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+        <br>
+    </div>
+    <div>
+        <h2>Insert User</h2>
+        <form action="/insert_user" method="POST" style="
+                    text-align: center;
+                    width: 10%;
+                    margin: auto;
+                ">
+                <label for="idnumber">Id:</label>
+                <input name="id" type="number" required>
+                <label for="fname">First Name:</label>
+                <input name="fname" type="text" required>
+                <label for="lname">Last Name:</label>
+                <input name="lname" type="text" required>
+                <label for="email">Email:</label>
+                <input name="email" type="email" required><br>
+                <label for="avatar">PIC Link:</label>
+                <input name="avatar" type="text" required><br>
+                <input type="submit">
+        </form>
+    </div>
+
+     <div>
+        <h2>Delete User</h2>
+        <form action="/delete_user" method="POST" style="
+                    text-align: center;
+                    width: 10%;
+                    margin: auto;
+                ">
+                <label for="idnumber">Id:</label>
+                <input name="id" type="number" required><br>
+                <input type="submit" onclick="myFunction()">
+                <script>
+                    function myFunction() {
+                    alert("The User Deleted!");}
+                </script>
+
+        </form>
+    </div>
+
+     <div>
+        <h2>Update Email User</h2>
+        <form action="/update_user" method="GET" style="
+                    text-align: center;
+                    width: 10%;
+                    margin: auto;
+                ">
+                <label for="idnumber">Id:</label>
+                <input name="id" type="number" required><br>
+                <label for="email">Email:</label>
+                <input name="email" type="email" required><br>
+                <input type="submit" onclick="myFunction1()">
+                <script>
+                    function myFunction1() {
+                    alert("The User is Updated!");}
+                </script>
+        </form>
+    </div>
+</body>
+</html>
