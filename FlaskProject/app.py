@@ -1,5 +1,5 @@
 from flask import Flask, url_for, redirect
-from flask import render_template, request, session, blueprints
+from flask import render_template, request, session, Blueprint, jsonify
 
 app = Flask(__name__)
 app.secret_key = '123'
@@ -56,6 +56,11 @@ def hello_assignment9():
 
 @app.route('/assignment10', methods=['GET', 'POST', 'DELETE', 'PUT'])
 def hello_assignment10():
+    return render_template('assignment10.html')
+
+
+@app.route('/assignment11', methods=['GET', 'POST', 'DELETE', 'PUT'])
+def hello_assignment11():
     return render_template('assignment10.html')
 
 

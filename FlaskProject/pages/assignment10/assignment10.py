@@ -1,7 +1,8 @@
-from flask import Flask, render_template, url_for, redirect, blueprints, session, request, Blueprint
+from flask import Flask, render_template, url_for, redirect, session, request, Blueprint, jsonify
 import mysql.connector
 
-assignment10 = Blueprint('assignment10', __name__, static_folder='static', static_url_path='/assignment10', template_folder='templates')
+assignment10 = Blueprint('assignment10', __name__, static_folder='static', static_url_path='/assignment10',
+                         template_folder='templates')
 
 
 #intataction with Data Base Function
@@ -65,8 +66,26 @@ def update_user():
     return redirect('/assignment10')
 
 
-@assignment10.route('/assignment10')
+@assignment10.route('/assignment11')
+@assignment10.route('/assignment11/users/')
 def users():
-    query = "select * from users;"
+    if request.method == 'GET':
+        query = "select * from users;"
+        query_result = interact_db(query, query_type='fetch')
+        if len(query_result) == 0:
+            return jsonify({'success': 'False', 'data':[]})
+        else:
+            return jsonify({'success': 'True', 'data':query_result})
+    else:
+        return render_template('assignment10.html')
+
+
+@assignment10.route('/assignment11/users/selected/', defaults={'userId':3})
+@assignment10.route('/assignment11/users/selected/<int:userId>')
+def select_user(userId):
+    query = "select * from users where UserID = '%s';" % userId
     query_result = interact_db(query, query_type='fetch')
-    return render_template('assignment10.html', users=query_result)
+    if len(query_result) == 0:
+        return jsonify('Error User Not Exists!')
+    else:
+        return jsonify({'success': 'True', 'data':query_result[0]})
